@@ -1,0 +1,32 @@
+.loader {
+  text-align: center;
+  justify-content: center;
+  border: 6px solid;
+  border-color: rgb(207, 207, 6) brown brown brown;
+  border-radius: 50%;
+  animation: loader-animation linear 2s infinite;
+}
+
+.loader-small {
+  height: 50px;
+  width: 50px;
+}
+
+.loader-medium {
+  height: 100px;
+  width: 100px;
+}
+
+.loader-large {
+  height: 200px;
+  width: 200px;
+}
+
+@keyframes loader-animation {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
