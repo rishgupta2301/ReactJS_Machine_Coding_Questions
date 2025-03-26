@@ -1,0 +1,45 @@
+.container {
+    height: 90vh;
+  }
+  .btns {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .clickme {
+    padding: 15px;
+    background-color: red;
+    border: none;
+    border-radius: 6px;
+    color: white;
+  }
+  .reset {
+    padding: 15px;
+    background-color: green;
+    border: none;
+    border-radius: 6px;
+    color: white;
+  }
+  
+  ul > li {
+    margin-bottom: 6px;
+    list-style: none;
+    max-width: 80%;
+    border: 2px solid;
+    background-color: lightcoral;
+    /* background-position: 100%; */
+    color: transparent;
+    animation: bg-transition 3s forwards;
+  }
+  
+  @keyframes bg-transition {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
