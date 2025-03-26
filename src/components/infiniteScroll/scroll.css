@@ -1,0 +1,19 @@
+.container {
+    /* box-sizing: border-box; */
+    height: 300px;
+    width: 300px;
+    margin-left: 20%;
+    border: 2px solid black;
+    overflow: auto;
+  }
+  
+  ul > li {
+    list-style: none;
+    font-size: medium;
+    background-color: aquamarine;
+    margin-bottom: 5px;
+    padding: 2px;
+    width: 80%;
+    border-radius: 10px;
+  }
+  
