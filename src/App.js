@@ -1,7 +1,8 @@
 // import CustomLoader from '../temp_component/customLoader/customLoader'
 // import InfiniteScroll from '../temp_component/infiniteScroll/InfiniteScroll';
 // import ProgressBar from '../temp_component/progressBar/ProgressBar';
-import CountdownTimer from '../src/components/countdownTimer/CountdownTimer';
+// import CountdownTimer from './components/countdownTimer/countdownTimer';
+import ExplorerComponent from "./components/fileExplorer/explorerComponent";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
      {/* <CustomLoader size="large"/> */}
      {/* <InfiniteScroll /> */}
      {/* <ProgressBar timer="5s" /> */}
-     <CountdownTimer />
+     {/* <CountdownTimer /> */}
+     <ExplorerComponent />
 
     </div>
   );
