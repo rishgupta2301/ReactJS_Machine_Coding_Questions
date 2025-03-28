@@ -1,87 +1,68 @@
 import { useReducer, useState } from "react";
 
+const InitialState = {
+    title: "", description: "", startDate: null, endDate: null
+}
+
 const Form = () => {
-  //   const [title, setTitle] = useState("");
-  //   const [description, setDescription] = useState("");
-  //   const [startDate, setStartDate] = useState();
-  //   const [endDate, setEndDate] = useState();
-  //   const [location, setLocation] = useState();
-  //   const [attendees, setAttendees] = useState([]);
 
-  const reducerFunction = (prevState, nextState) =>{
-    const newEvent = {...prevState, ...nextState};
+  const reducerFunction = (state, action) =>{
+    const {type, payload} = action;
 
-    // Validation: Ensure endDate is not before startDate
-    if (newEvent.startDate > newEvent.endDate) {
-        newEvent.startDate = newEvent.endDate;
-      }
-
-      // Validation: Limit title to 100 characters
-      if (newEvent.title.length > 100) {
-        newEvent.title = newEvent.title.substring(0, 100);
-      }
-
-      return newEvent;
+    switch (type) {
+        case 'title':{
+            return {...state, title:payload}
+        }
+        case 'description':{
+            return {...state, description:payload}
+        }
+        case 'startDate':{
+            return {...state, startDate:payload}
+        }
+        case 'endDate':{
+            return {...state, endDate:payload}
+        }    
+    
+        default:
+            return state;
+    }
   }
 
   // useReducer takes 2 arguments: 1: reducer function 2: InitialState
-  const [event, updateEvent] = useReducer(
-    reducerFunction, { title: "", description: "", startDate: null, endDate: null }
+  // here event is the name of the object and dispatch is the function which is dispatching an action which is then
+  // calling the reducer function which then checks the {type and payload} inside the action and update them accordingly 
+  const [event, dispatch] = useReducer(
+    reducerFunction, InitialState
   );
 
   return (
     <div>
-      {/* <input
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Event Title"
-      />
-      <input
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        placeholder="Event Description"
-      />
-      <input
-        value={startDate}
-        type="date"
-        onChange={(e) => setStartDate(e.target.value)}
-        placeholder="Event Description"
-      />
-      <input
-        value={endDate}
-        onChange={(e) => setEndDate(e.target.value)}
-        placeholder="Event Description"
-      />
-      <input
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-        placeholder="Event Description"
-      /> */}
 
       <input
         value={event.title}
-        onChange={(e) => updateEvent({ title: e.target.value })}
+        onChange={(e) => dispatch({ type:"title", payload: e.target.value })}
         placeholder="Event Title"
       />
       <input
         value={event.description}
-        onChange={(e) => updateEvent({ description: e.target.value })}
+        onChange={(e) => dispatch({ type:"description",payload: e.target.value })}
         placeholder="Event Description"
       />
       <input
         type="date"
         value={event.startDate || ""}
-        onChange={(e) => updateEvent({ startDate: e.target.value })}
+        onChange={(e) => dispatch({ type:"startDate",payload: e.target.value })}
       />
       <input
         type="date"
         value={event.endDate || ""}
-        onChange={(e) => updateEvent({ endDate: e.target.value })}
+        onChange={(e) => dispatch({ type:"endDate",payload: e.target.value })}
       />
 
         <p>Title: {event.title}</p>
         <p>Desc: {event.description}</p>
         <p>Start Date: {event.startDate}</p>
+        <p>Start Date: {event.endDate}</p>
 
     </div>
   );
