@@ -8,12 +8,11 @@ const Form = () => {
   //   const [location, setLocation] = useState();
   //   const [attendees, setAttendees] = useState([]);
 
-  const [event, updateEvent] = useReducer(
-    (prev, next) => {
-      const newEvent = { ...prev, ...next };
+  const reducerFunction = (prevState, nextState) =>{
+    const newEvent = {...prevState, ...nextState};
 
-      // Validation: Ensure endDate is not before startDate
-      if (newEvent.startDate > newEvent.endDate) {
+    // Validation: Ensure endDate is not before startDate
+    if (newEvent.startDate > newEvent.endDate) {
         newEvent.startDate = newEvent.endDate;
       }
 
@@ -23,8 +22,11 @@ const Form = () => {
       }
 
       return newEvent;
-    },
-    { title: "", description: "", startDate: null, endDate: null }
+  }
+
+  // useReducer takes 2 arguments: 1: reducer function 2: InitialState
+  const [event, updateEvent] = useReducer(
+    reducerFunction, { title: "", description: "", startDate: null, endDate: null }
   );
 
   return (
