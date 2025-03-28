@@ -2,7 +2,9 @@
 // import InfiniteScroll from '../temp_component/infiniteScroll/InfiniteScroll';
 // import ProgressBar from '../temp_component/progressBar/ProgressBar';
 // import CountdownTimer from './components/countdownTimer/countdownTimer';
-import ExplorerComponent from "./components/fileExplorer/explorerComponent";
+// import ExplorerComponent from "./components/fileExplorer/explorerComponent";
+
+import Form from "./components/formUsingUseReducer/form";
 
 function App() {
   return (
@@ -11,7 +13,8 @@ function App() {
      {/* <InfiniteScroll /> */}
      {/* <ProgressBar timer="5s" /> */}
      {/* <CountdownTimer /> */}
-     <ExplorerComponent />
+     {/* <ExplorerComponent /> */}
+     <Form />
 
     </div>
   );
