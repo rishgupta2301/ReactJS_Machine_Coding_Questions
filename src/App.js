@@ -4,7 +4,8 @@
 // import CountdownTimer from './components/countdownTimer/countdownTimer';
 // import ExplorerComponent from "./components/fileExplorer/explorerComponent";
 
-import Form from "./components/formUsingUseReducer/form";
+// import Form from "./components/formUsingUseReducer/form";
+import ThemeButton from "./components/hooks/ThemeToggleWithContext/themeButton";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
      {/* <ProgressBar timer="5s" /> */}
      {/* <CountdownTimer /> */}
      {/* <ExplorerComponent /> */}
-     <Form />
+     {/* <Form /> */}
+     <ThemeButton />
 
     </div>
   );
