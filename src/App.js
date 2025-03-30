@@ -4,8 +4,10 @@
 // import CountdownTimer from './components/countdownTimer/countdownTimer';
 // import ExplorerComponent from "./components/fileExplorer/explorerComponent";
 
+import Cart from "./components/cart/cart";
+
 // import Form from "./components/formUsingUseReducer/form";
-import ThemeButton from "./components/hooks/ThemeToggleWithContext/themeButton";
+// import ThemeButton from "./components/hooks/ThemeToggleWithContext/themeButton";
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
      {/* <CountdownTimer /> */}
      {/* <ExplorerComponent /> */}
      {/* <Form /> */}
-     <ThemeButton />
+     {/* <ThemeButton /> */}
+     <Cart />
 
     </div>
   );
