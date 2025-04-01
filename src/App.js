@@ -7,12 +7,14 @@
 // import Form from "./components/formUsingUseReducer/form";
 // import ThemeButton from "./components/hooks/ThemeToggleWithContext/themeButton";
 
-import { useRef } from "react";
-import FancyInput from "./components/hooks/useImperativeHandle";
+import ValidOtp from "./components/OTP/validOtp";
+
+// import { useRef } from "react";
+// import FancyInput from "./components/hooks/useImperativeHandle";
 
 function App() {
 
-  const fancyInputRef = useRef(null);
+  // const fancyInputRef = useRef(null);
 
   return (
     <div className="App">
@@ -25,9 +27,12 @@ function App() {
      {/* <ThemeButton /> */}
      {/* <Cart /> */}
 
-     <FancyInput ref={fancyInputRef} />
+     {/* <FancyInput ref={fancyInputRef} />
      <button onClick={() => fancyInputRef.current.focus()}>Focus</button>
-     <button onClick={() => fancyInputRef.current.clear()}>Clear</button>
+     <button onClick={() => fancyInputRef.current.clear()}>Clear</button> */}
+
+      <ValidOtp total_digits={2}/>
+
 
     </div>
   );
