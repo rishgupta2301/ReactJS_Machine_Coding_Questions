@@ -6,6 +6,7 @@
 // import Cart from "./components/cart/cart";
 // import Form from "./components/formUsingUseReducer/form";
 // import ThemeButton from "./components/hooks/ThemeToggleWithContext/themeButton";
+import Page from "./components/pagination/page";
 
 import ValidOtp from "./components/OTP/validOtp";
 import TabForm from "./components/tab-form/tabForm";
@@ -34,7 +35,9 @@ function App() {
 
       {/* <ValidOtp total_digits={2}/> */}
 
-      <TabForm />
+      {/* <TabForm /> */}
+
+      <Page />
 
 
     </div>
