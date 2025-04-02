@@ -62,7 +62,7 @@ const TabForm = () => {
         {tabs.map((tab, index) => {
           return (
             <div
-              onClick={() => setActiveTab(index)}
+              onClick={() => tabs[activeTab].validate() && setActiveTab(index)}
               className="heading-div"
               key={index}
             >
