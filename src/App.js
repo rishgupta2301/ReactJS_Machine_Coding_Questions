@@ -8,6 +8,7 @@
 // import ThemeButton from "./components/hooks/ThemeToggleWithContext/themeButton";
 
 import ValidOtp from "./components/OTP/validOtp";
+import TabForm from "./components/tab-form/tabForm";
 
 // import { useRef } from "react";
 // import FancyInput from "./components/hooks/useImperativeHandle";
@@ -31,7 +32,9 @@ function App() {
      <button onClick={() => fancyInputRef.current.focus()}>Focus</button>
      <button onClick={() => fancyInputRef.current.clear()}>Clear</button> */}
 
-      <ValidOtp total_digits={2}/>
+      {/* <ValidOtp total_digits={2}/> */}
+
+      <TabForm />
 
 
     </div>
