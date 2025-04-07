@@ -6,15 +6,20 @@
 // import Cart from "./components/cart/cart";
 // import Form from "./components/formUsingUseReducer/form";
 // import ThemeButton from "./components/hooks/ThemeToggleWithContext/themeButton";
-import Page from "./components/pagination/page";
+// import Page from "./components/pagination/page";
 
-import ValidOtp from "./components/OTP/validOtp";
-import TabForm from "./components/tab-form/tabForm";
+// import ValidOtp from "./components/OTP/validOtp";
+// import TabForm from "./components/tab-form/tabForm";
 
 // import { useRef } from "react";
 // import FancyInput from "./components/hooks/useImperativeHandle";
 
+import { useState } from "react";
+import Checkboxes  from "./components/nestedCheckbox/Checkboxes";
+import directory from "./components/nestedCheckbox/data"
+
 function App() {
+  const [checked, setChecked] = useState({})
 
   // const fancyInputRef = useRef(null);
 
@@ -37,7 +42,8 @@ function App() {
 
       {/* <TabForm /> */}
 
-      <Page />
+      {/* <Page /> */}
+      <Checkboxes directory={directory} checked={checked} setChecked={setChecked}/>
 
 
     </div>
