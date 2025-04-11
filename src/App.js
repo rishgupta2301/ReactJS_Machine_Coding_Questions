@@ -17,12 +17,18 @@
 import { useState } from "react";
 // import Checkboxes  from "./components/nestedCheckbox/Checkboxes";
 // import directory from "./components/nestedCheckbox/data"
-import Album from "./components/albumModal/Album";
+// import Album from "./components/albumModal/Album";
+
+import useResize from "./components/ResizeWithThrottle/useResize";
 
 function App() {
   // const [checked, setChecked] = useState({})
 
   // const fancyInputRef = useRef(null);
+
+  // const width = window.innerWidth;
+  // console.log("innerwidth: ",width);
+  let screentype = useResize();
 
   return (
     <div className="App">
@@ -46,7 +52,9 @@ function App() {
       {/* <Page /> */}
 
       {/* <Checkboxes directory={directory} checked={checked} setChecked={setChecked}/> */}
-      <Album />
+      {/* <Album /> */}
+
+      <p>{screentype}</p>
 
 
     </div>
