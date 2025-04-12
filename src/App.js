@@ -19,7 +19,8 @@ import { useState } from "react";
 // import directory from "./components/nestedCheckbox/data"
 // import Album from "./components/albumModal/Album";
 
-import useResize from "./components/ResizeWithThrottle/useResize";
+// import useResize from "./components/ResizeWithThrottle/useResize";
+import Dropdown from "./components/multiSelectDropdown/dropdown";
 
 function App() {
   // const [checked, setChecked] = useState({})
@@ -28,7 +29,7 @@ function App() {
 
   // const width = window.innerWidth;
   // console.log("innerwidth: ",width);
-  let screentype = useResize();
+  // let screentype = useResize();
 
   return (
     <div className="App">
@@ -54,8 +55,9 @@ function App() {
       {/* <Checkboxes directory={directory} checked={checked} setChecked={setChecked}/> */}
       {/* <Album /> */}
 
-      <p>{screentype}</p>
+      {/* <p>{screentype}</p> */}
 
+      <Dropdown />
 
     </div>
   );
