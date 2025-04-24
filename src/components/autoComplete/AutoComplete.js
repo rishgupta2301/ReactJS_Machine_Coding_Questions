@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import './autoComplete.css'
 
@@ -6,29 +7,29 @@ const AutoComplete = () => {
     const [input, setInput] = useState("")
     const [data, setData] = useState([]);
     const [showRes, setShowRes] = useState(false)
+    const [cache, setCache] = useState({})
+    
 
-    function debounce(func, delay){
-        let timeoutId = null;
-
-        return function(...args){
-            clearTimeout(timeoutId); // if the user types in between the delay then the timout will get cleared and will be updated back to the original delay in the below line of code
-            timeoutId= setTimeout(() => func(args), delay);
-        }
+    const fetchData = async() => {
+        if(cache[input]){
+            console.log("hasdata: ",input);
+            setData(cache[input]);
+            return;
+        } 
+        console.log("API calls: ",input)
+        const result = await fetch(`https://dummyjson.com/recipes/search?q=${input}`);
+        const jsonRes = await result.json();
+        setData(jsonRes?.recipes);
+        setCache(prev => ({...cache, [input]:jsonRes?.recipes}))
     }
 
+    // debouncing
     useEffect(() => {
-        const fetchData = async() => {
-            const result = await fetch(`https://dummyjson.com/recipes/search?q=${input}`)
-            .then((res) => res.json());
-            console.log(result)
-            setData(result?.recipes)
+        const timer = setTimeout(fetchData, 300);
+
+        return () => {
+            clearTimeout(timer);
         }
-
-        const debouncedFetchData = debounce(fetchData, 2000);
-
-        input && debouncedFetchData();
-
-        return () => {}
     },[input])
 
     return(
