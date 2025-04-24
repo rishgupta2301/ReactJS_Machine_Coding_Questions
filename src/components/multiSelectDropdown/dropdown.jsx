@@ -79,7 +79,8 @@ const Dropdown = () => {
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-        if (containerRef.current && !containerRef.current.contains(e.target)) {
+        if (containerRef.current && !containerRef.current.contains(e.target)) { // that means we are clicking outside the containerRef as containerRef.current will not contain anything outside the container
+            console.log(containerRef.current)
             setIsShow(false);
           }
     }
@@ -90,11 +91,7 @@ const Dropdown = () => {
 
   return (
     <div>
-      <div className="container" ref={containerRef}  style={{display:"flex",flexDirection:"column",gap:"10px",height:"300px", width:"400px", border:"1px solid", zIndex:"100"}} 
-    //   onClick={(e) => {
-    //         return setIsShow(true)
-    //       }}
-          >
+      <div className="container" ref={containerRef}  style={{display:"flex",flexDirection:"column",gap:"10px",height:"300px", width:"400px", border:"1px solid"}}>
             <span style={{marginLeft:"95%"}}
             onClick={(e) => {
                 return setIsShow(true)

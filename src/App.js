@@ -15,13 +15,20 @@
 // import FancyInput from "./components/hooks/useImperativeHandle";
 
 import { useState } from "react";
+// import CommentSection from "./components/commentSection/CommentSection";
 // import Checkboxes  from "./components/nestedCheckbox/Checkboxes";
 // import directory from "./components/nestedCheckbox/data"
 // import Album from "./components/albumModal/Album";
 
 // import useResize from "./components/ResizeWithThrottle/useResize";
-import Dropdown from "./components/multiSelectDropdown/dropdown";
+// import Dropdown from "./components/multiSelectDropdown/dropdown";
 
+// import initialComments from "./components/commentSection/commentData";
+
+// import data from "./components/FAQ_accordian/faqData";
+// import FAQ from "./components/FAQ_accordian/FAQ";
+
+  import AutoComplete from "./components/autoComplete/AutoComplete";
 function App() {
   // const [checked, setChecked] = useState({})
 
@@ -57,7 +64,13 @@ function App() {
 
       {/* <p>{screentype}</p> */}
 
-      <Dropdown />
+      {/* <Dropdown /> */}
+
+      {/* <CommentSection initialComments={initialComments}/> */}
+
+      {/* <FAQ data={data}/> */}
+
+      <AutoComplete />
 
     </div>
   );
