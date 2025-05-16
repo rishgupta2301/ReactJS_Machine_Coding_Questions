@@ -29,6 +29,7 @@ import { useState } from "react";
 // import FAQ from "./components/FAQ_accordian/FAQ";
 
   import AutoComplete from "./components/autoComplete/AutoComplete";
+import Bar from "./components/progressBar2/bar";
 function App() {
   // const [checked, setChecked] = useState({})
 
@@ -70,7 +71,8 @@ function App() {
 
       {/* <FAQ data={data}/> */}
 
-      <AutoComplete />
+      {/* <AutoComplete /> */}
+      <Bar />
 
     </div>
   );
