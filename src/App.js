@@ -30,6 +30,7 @@ import { useState } from "react";
 
   import AutoComplete from "./components/autoComplete/AutoComplete";
 import Bar from "./components/progressBar2/bar";
+import TicTac from "./components/tictactoe/TicTac";
 function App() {
   // const [checked, setChecked] = useState({})
 
@@ -72,7 +73,8 @@ function App() {
       {/* <FAQ data={data}/> */}
 
       {/* <AutoComplete /> */}
-      <Bar />
+      {/* <Bar /> */}
+      <TicTac />
 
     </div>
   );
