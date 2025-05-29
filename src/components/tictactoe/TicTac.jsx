@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from "react";
 
 const size = 3;
 
-const arrwin = [[0, 4, 8]];
-
 const TicTac = () => {
   const [arr, setArr] = useState(new Array(size * size).fill(null));
   const [clickXorY, setClickXorY] = useState("X");
