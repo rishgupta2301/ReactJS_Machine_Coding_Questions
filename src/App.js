@@ -75,8 +75,8 @@ function App() {
 
       {/* <AutoComplete /> */}
       {/* <Bar /> */}
-      {/* <TicTac /> */}
-      <ChipsInput />
+      <TicTac size={4}/>
+      {/* <ChipsInput /> */}
 
     </div>
   );
