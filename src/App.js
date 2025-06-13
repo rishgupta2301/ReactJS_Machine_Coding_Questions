@@ -32,6 +32,7 @@ import { useState } from "react";
 import Bar from "./components/progressBar2/bar";
 import TicTac from "./components/tictactoe/TicTac";
 import ChipsInput from "./components/chipsInput/ChipsInput";
+import AllComments from "./components/nestedComments/AllComments";
 function App() {
   // const [checked, setChecked] = useState({})
 
@@ -75,8 +76,9 @@ function App() {
 
       {/* <AutoComplete /> */}
       {/* <Bar /> */}
-      <TicTac size={4}/>
+      {/* <TicTac size={4}/> */}
       {/* <ChipsInput /> */}
+      <AllComments />
 
     </div>
   );
