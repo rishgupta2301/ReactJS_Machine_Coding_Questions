@@ -36,6 +36,8 @@ import AllComments from "./components/nestedComments/AllComments";
 
 import Parent from "./components/childToParent/Parent";
 
+import Form from "./components/hooks/react-19/formWithUseActionState";
+
 function App() {
   // const [checked, setChecked] = useState({})
 
@@ -82,7 +84,10 @@ function App() {
       {/* <TicTac size={4}/> */}
       {/* <ChipsInput /> */}
       {/* <AllComments /> */}
-      <Parent />
+      {/* <Parent /> */}
+
+      <Form />
+      
 
     </div>
   );
